@@ -62,7 +62,7 @@ The request body should be in JSON format. Below is an example of how to structu
 http://localhost:8080/api/farm/reports/farm/1?season=Harvest
 ```
 ### OUTPUT
-```json
+```text
 Crop: Tomato, Expected: 200.0, Actual: 190.0
 Crop: Potatoes, Expected: 80.0, Actual: 85.0
 Crop: Tomato, Expected: 200.0, Actual: 190.0
