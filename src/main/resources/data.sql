@@ -17,11 +17,10 @@ CREATE TABLE planting_info (
     FOREIGN KEY (farm_id) REFERENCES farm(id)
 );
 
-CREATE TABLE planting_info (
+CREATE TABLE harvesting_info (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     crop_type VARCHAR(255) NOT NULL,
-    planting_area DECIMAL(10, 2) NOT NULL,
-    expected_product DECIMAL(10, 2) NOT NULL,
+    actual_harvested_product DOUBLE NOT NULL,
     farm_id BIGINT NOT NULL,
     season VARCHAR(255) NOT NULL,
     FOREIGN KEY (farm_id) REFERENCES farm(id)
