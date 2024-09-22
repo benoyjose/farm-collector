@@ -24,3 +24,24 @@ The request body should be in JSON format. Below is an example of how to structu
   },
   "season": "Harvest"
 }
+```
+
+### 2. Add Harvested Information
+
+**POST** `http://localhost:8080/api/farm/harvested`
+
+#### Request Body
+
+The request body should be in JSON format. Below is an example of how to structure the JSON for adding harvested information:
+
+```json
+{
+    "id": 3,
+    "cropType": "Tomato",
+    "actualHarvestedProduct": 190.0,
+    "farm": {
+        "id": 1,
+        "name": null
+    },
+    "season": "Harvest"
+}
