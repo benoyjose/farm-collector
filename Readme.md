@@ -47,17 +47,23 @@ The request body should be in JSON format. Below is an example of how to structu
 }
 ```
 
-### 3. Get Report 
+### 3. Get Report
 
-**GET** `http://localhost:8080/api/farm/reports/farm/1?season=Harvest`
+**GET** `http://localhost:8080/api/farm/reports/farm/{farmId}?season={season}`
 
-#### Query Parameter
+#### Query Parameters
 
-The query parameter should include season :
-eg: season=Harvest
+- **farmId**: The ID of the farm (e.g., `1`).
+- **season**: The season for which you want the report (e.g., `Harvest`).
 
+#### Example Request
+
+```plaintext
+http://localhost:8080/api/farm/reports/farm/1?season=Harvest
+```
+### OUTPUT
 ```json
-OUTPUT
 Crop: Tomato, Expected: 200.0, Actual: 190.0
 Crop: Potatoes, Expected: 80.0, Actual: 85.0
 Crop: Tomato, Expected: 200.0, Actual: 190.0
+```
