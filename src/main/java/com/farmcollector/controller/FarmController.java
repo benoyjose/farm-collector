@@ -40,7 +40,6 @@ public class FarmController {
         List<PlantingInfo> plantingInfos = farmService.getPlantingInfo(farm, season);
         List<HarvestingInfo> harvestingInfos = farmService.getHarvestingInfo(farm, season);
 
-        // Generate the report using a helper method
         String report = generateReport(plantingInfos, harvestingInfos);
         return ResponseEntity.ok(report);
     }

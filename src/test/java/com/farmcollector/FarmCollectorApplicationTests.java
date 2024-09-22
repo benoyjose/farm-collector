@@ -8,6 +8,7 @@ import com.farmcollector.repository.PlantingInfoRepository;
 import com.farmcollector.service.FarmService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.farmcollector.model.PlantingInfo;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,7 @@ public class FarmCollectorApplicationTests {
         farmRepository.deleteAll();
         prepopulateData();
     }
-
+    @Transactional
     @Test
     public void testAddPlantingInfo() throws Exception {
         Farm farm = new Farm();
